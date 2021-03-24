@@ -23,7 +23,7 @@ function createTable(filteredData){
     var trow;
 
     // Remove any children from the tablebody
-    tablebody.html("");
+    tbody.html("");
 
     // Loop through each object and append the data to the table
     filteredData.forEach(function(dataObject){
