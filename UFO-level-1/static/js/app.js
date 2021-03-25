@@ -1,7 +1,6 @@
 // from data.js
 var tableData = data;
 
-// YOUR CODE HERE!
 // Select the button
 var button = d3.select("#filter-btn");
 
@@ -44,19 +43,18 @@ function createTable(filteredData){
 // Event Handler Function
 function runEvent(){
 
-    // Prevent Page from Refreshing
+    // Prevent the page from refreshing
     d3.event.preventDefault();
 
     // Select the input element and get the raw HTML node
     var inputElement = d3.select("#datetime");
 
-    // Get the input value (date) from the input element
+    // Get the value property (date) of the input element
     var inputData = inputElement.property("value");
 
     // Filter the data.js by the input value
     var filteredData = tableData.filter(sighting => sighting.datetime === inputData);
 
-    // Call the createTable function with the 
-    // filteredData as the parameter
+    // Call the createTable function with the filteredData as the parameter
     createTable(filteredData);
 };
